@@ -1,0 +1,665 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    padding: 0;
+    margin: 0;
+}
+
+/* Боковое меню */
+.desc-menu {
+    width: 300px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    padding-top: 60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dadada;
+}
+
+.menu-toggle,
+.menu-toggle .footer-main {
+    display: none;
+}
+
+/* Основное меню */
+.main-menu {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.main-menu li,
+.second-menu li {
+    padding-top: 8px;
+    list-style: none;
+    text-align: center;
+}
+
+.main-menu li a,
+.second-menu li a {
+    text-decoration: none;
+    font-size: 19px;
+    color: #575756;
+}
+
+.main-menu li a:hover,
+.second-menu li a:hover {
+    color: #7ab7a8;
+}
+
+/* Активный пункт меню */
+.main-menu .active-menu a,
+.second-menu .active-menu a {
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #fff;
+}
+
+.main-menu .active-menu a:hover,
+.second-menu .active-menu a:hover {
+    color: #575756;
+}
+
+/* Планируемый пункт меню */
+.main-menu .planned-menu a,
+.second-menu .planned-menu a {
+    color: #cacac9;
+}
+
+.main-menu .planned-menu a:hover,
+.second-menu .planned-menu a:hover {
+    color: #cacac9;
+}
+
+/* Второстепенное меню */
+.second-menu {
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+}
+
+.second-menu li {
+    padding-top: 5px;
+}
+
+.second-menu li a {
+    font-size: 15px;
+}
+
+/* Кнопка открытия адаптивного меню */
+
+#hamburger_id {
+    display: none;
+    z-index: 2;
+}
+
+.hamburger {
+    position: relative;
+    padding: 20px 15px 16px;
+    height: 60px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition-property: opacity, -webkit-filter;
+    transition-property: opacity, -webkit-filter;
+    -o-transition-property: opacity, filter;
+    transition-property: opacity, filter;
+    transition-property: opacity, filter, -webkit-filter;
+    -webkit-transition-duration: 0.15s;
+         -o-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+         -o-transition-timing-function: linear;
+            transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.hamburger.is-active::after {
+    content: 'Закрыть';
+    left: calc(50% - 28px);
+}
+
+.hamburger::after {
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 20px);
+    content: 'Меню';
+    font-size: 13px;
+    text-align: center;
+    color: #e36f4d;
+}
+
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger-box {
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 4px;
+    background-color: #e37d5f;
+    border-radius: 4px;
+    position: absolute;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.15s;
+         -o-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+.hamburger-slider .hamburger-inner::after {
+    top: 15px;
+}
+
+.hamburger-slider .hamburger-inner::before {
+    top: 8px;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-duration: 0.15s;
+         -o-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+}
+
+.hamburger-slider .hamburger-inner {
+    top: 2px;
+}
+
+.hamburger-slider.is-active .hamburger-inner {
+    -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+            transform: translate3d(0, 10x, 0) rotate(45deg);
+}
+
+.hamburger-slider.is-active .hamburger-inner::after {
+    -webkit-transform: translate3d(0, -15px, 0) rotate(-90deg);
+            transform: translate3d(0, -15px, 0) rotate(-90deg);
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+    background-color: #e37d5f;
+}
+.hamburger-slider.is-active .hamburger-inner::before {
+    -webkit-transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+            transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0;
+}
+
+/* Подвал бокового меню */
+.footer-main {
+    padding-top: 130px;
+    padding-bottom: 56px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Выбор города и номер телефона */
+.city-phone {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.city-phone button {
+    color: #7ab7a8;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Montserrat";
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.city-phone button:hover {
+    color: #e37d5f;
+}
+
+.city-phone button::after {
+    content: "\f107";
+    font-family: "fontAwesome";
+    padding-left: 6px;
+}
+
+.city-phone p {
+    padding-top: 10px;
+    color: #575756;
+    font-size: 19px;
+}
+
+/* Выбор города */
+.city-selection {
+    display: none;
+    position: relative;
+    width: 180px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 0.1px #ebebeb;
+    z-index: 0;
+}
+
+.city-selection a {
+    margin-top: 14px;
+    display: block;
+    color: #575756;
+    text-decoration: none;
+}
+
+.city-selection a:first-child {
+    margin-top: 0;
+}
+
+.city-selection a::after {
+    content: "";
+}
+
+.city-selection a:hover {
+    color: #7ab7a8;
+}
+
+.city-selection .active-city {
+    color: #acacac;
+}
+
+.city-selection .active-city:hover {
+    color: #acacac;
+}
+
+.city-selection::before, .city-selection::after {
+    content: ''; 
+    position: absolute;
+    left: calc(50% - 10px); 
+    bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid white;
+    z-index: -1;
+}
+
+/* Нажатие на выбор города */
+.city-phone .active {
+    color: #e37d5f;
+}
+
+.city-phone .active::after {
+    content: "\f106";
+}
+
+.active-selection {
+    display: block;
+    position: absolute;
+    top: -128px;
+    left: 60px;
+}
+
+/* Номер тур. оператора */
+.tour-operator-number {
+    padding-top: 20px;
+    text-align: center;
+    color: #acacac;
+    font-size: 13px;
+}
+
+/* Содержимое страницы */
+main {
+    margin-left: 300px;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+/* Эксклюзивный отдых */
+.premium-holidays {
+    background: url(../img/bg.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 230px;
+    padding-bottom: 350px;
+    color: #fff;
+}
+
+.premium-holidays h1 {
+    font-weight: 300;
+    font-size: 70px;
+    line-height: 70px;
+}
+
+.advantages-list {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.advantages-item {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+    font-size: 18px;
+}
+
+.advantages-item img {
+    padding-right: 12px;
+}
+
+/* Кнопка связи */
+.contact-us-btn {
+    cursor: pointer;
+    padding: 20px 40px;
+    background-color: #e37d5f;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-size: 19px;
+    color: #fff;
+}
+
+.contact-us-btn:hover {
+    background-color: #db613d;
+}
+
+/* Акции и новости */
+.news-events {
+    margin-top: -140px;
+}
+
+/* Сслыка на страницу всех новостей */
+.all-news-events {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    color: #fff;
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.all-news-events::after {
+    content: "\f105";
+    width: 22px;
+    height: 26px;
+    margin-top: 4px;
+    margin-left: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-family: "fontAwesome";
+    font-size: 16px;
+    padding-left: 4px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.all-news-events:hover::after {
+    background-color: #db613d;
+    border: 2px solid #db613d;
+}
+
+/* Карточки акций и новостей */
+.news-events-list {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-events-item {
+    width: 280px;
+    padding-bottom: 40px;
+    background-color: #f6f6f6;
+    text-decoration: none;
+}
+
+.news-events-item:hover {
+    box-shadow: 5px 5px 0px 0px #e37d5f;
+}
+
+.news-events-img {
+    height: 200px;
+}
+
+.news-events-img img {
+    width: 280px;
+    height: 200px;
+}
+
+.news-events-date {
+    margin-top: -18px;
+    padding: 0px 30px;
+    color: #e37d5f;
+}
+
+.news-events-date .date {
+    font-size: 40px;
+}
+
+.news-events-desc {
+    padding: 20px 30px 0 30px;
+}
+
+.news-events-desc h3 {
+    color: #575756;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* Описание эксклюзивного отдыха */
+.premium-holidays-desc {
+    padding-top: 120px;
+    padding-bottom: 600px;
+}
+
+.premium-holidays-desc-bg {
+    position: relative;
+    background: url(../img/bg-exclusive.jpg) no-repeat center;
+    background-size: cover;
+    height: 630px;
+}
+
+.premium-holidays-desc-text {
+    position: absolute;
+    padding: 50px 60px 60px;
+    background-color: #89c0d6;
+    color: #fff;
+    top: 120px;
+    left: 360px;
+}
+
+.premium-holidays-desc-text h2 {
+    padding-bottom: 20px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+
+.premium-holidays-desc-text h2 br {
+    display: none;
+}
+
+.premium-holidays-desc-text p {
+    padding-top: 30px;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+/* Подвал сайта */
+footer {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: #363636;
+}
+
+.subscribe-newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.subscribe-newsletter-desc {
+    width: 300px;
+}
+
+.subscribe-newsletter-desc p:first-child {
+    color: #fff;
+    font-size: 19px;
+}
+
+.subscribe-newsletter-desc p:last-child {
+    padding-top: 14px;
+    color: #948f96;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.form-privacy-policy {
+    width: 540px;
+}
+
+.form-privacy-policy form {
+    display: flex;
+}
+
+.form-privacy-policy input {
+    width: 320px;
+    padding: 18px 25px;
+    border: none;
+    background-color: #4a4a4a;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.form-privacy-policy input,
+.form-privacy-policy input::placeholder {
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 13px;
+}
+
+.form-privacy-policy button {
+    width: 170px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #cecece;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+}
+
+.form-privacy-policy button:hover {
+    background-color: #db613d;
+    color: #fff;
+}
+
+.sn-privacy-policy {
+    padding-top: 24px;
+    padding-left: 5px;
+    color: #948f96;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+}
+
+.sn-privacy-policy a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sn-privacy-policy a:hover,
+.copyright-privacy-policy a:hover,
+.contacts-title-social .social a:hover {
+    color: #e36f4d;
+}
+
+.copyright-privacy-policy {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.copyright-privacy-policy p {
+    color: #948f96;
+}
+
+.copyright-privacy-policy a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.privacy-policy-social {
+    display: flex;
+    align-items: center;
+}
+
+.privacy-policy-social a:first-child {
+    margin-left: 0;
+    margin-right: 60px;
+}
+
+.social a:first-child {
+    margin-right: 25px;
+}
+
+.fab {
+    font-family: "fontAwesome";
+    font-size: 22px;
+    font-style: normal;
+}

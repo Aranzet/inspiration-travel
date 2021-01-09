@@ -1,0 +1,177 @@
+.contacts-img-subscribe .container {
+    position: relative;
+}
+
+.contacts-img img {
+    width: 100%;
+}
+
+.contacts-subscribe {
+    width: 390px;
+    padding: 30px;
+    position: absolute;
+    top: -220px;
+    right: 0;
+    background-color: #89c0d6;
+}
+
+.newsletter-desc p:first-child {
+    padding-bottom: 10px;
+    color: #fff;
+    font-size: 19px;
+    letter-spacing: 0.6px;
+}
+
+.newsletter-desc p:last-child {
+    padding-bottom: 30px;
+    color: #e1f1f7;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.form-contacts-privacy-policy form {
+    display: flex;
+}
+
+.form-contacts-privacy-policy input {
+    width: 210px;
+    padding: 18px 20px;
+    background-color: #fff;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-family: 'Montserrat';
+    color: #575756;
+    font-size: 13px;
+}
+
+.form-contacts-privacy-policy button {
+    width: 150px;
+    background-color: #568a9f;
+    border: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 13px;
+}
+
+.contacts-privacy-policy p {
+    padding-top: 15px;
+    font-size: 13px;
+    color: #e1f1f7;
+    letter-spacing: 0.6px;
+}
+
+.contacts-privacy-policy p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contacts-privacy-policy p a:hover {
+    color: #e36f4d;
+}
+
+.contacts-title-social {
+    padding-top: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts-title-social h1 {
+    color: #575756;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.contacts-title-social .social a {
+    text-decoration: none;
+    color: #363636;
+}
+
+.contacts-table {
+    padding-top: 50px;
+}
+
+.contacts-ltc,
+.contacts-city,
+.employee-contacts-table {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 30px 40px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.ltc-name,
+.city-name,
+.employee-name {
+    width: 440px;
+    color: #7ab7a8;
+    text-transform: uppercase;
+}
+
+.ltc-name h3,
+.city-name h3,
+.employee-name h3 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.ltc-number,
+.contacts-address,
+.employee-contacts {
+    width: 400px;
+}
+
+.ltc-number p,
+.contacts-address p,
+.employee-contacts p {
+    color: #575756;
+    line-height: 25px;
+}
+
+.moscov,
+.chelyabinsk,
+.dubai,
+.booking,
+.aviatransportations,
+.finance {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dedede;
+}
+
+.chelyabinsk,
+.dubai,
+.aviatransportations,
+.finance {
+    padding-top: 30px;
+}
+
+.dubai,
+.finance {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.employee-contacts-title {
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+
+.employee-contacts-title h2 {
+    color: #575756;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.employee-contacts-table {
+    margin-bottom: 180px;
+}
+
+.booking .employee-contacts p:last-child {
+    padding-top: 30px;
+}

@@ -1,0 +1,675 @@
+/* Адаптивнсть меню по высоте экрана */
+
+@media screen and (max-height: 900px) {
+    .desc-menu {
+        padding-top: 30px;
+    }
+    .logo img {
+        height: 170px;
+    }
+    .main-menu {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .footer-main {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .menu-toggle nav.active .second-menu {
+        margin-top: 100px !important;
+    }
+}
+
+@media screen and (max-height: 460px) {
+    .menu-toggle nav.active .footer-main {
+        padding-top: 40px !important;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .menu-toggle::after {
+        display: none;
+    }
+    .menu-toggle nav.active .main-menu {
+        margin-top: 30px !important;
+    }
+}
+
+@media screen and (max-height: 360px) {
+    .menu-toggle nav.active .second-menu {
+        margin-top: 50px !important;
+    }
+}
+
+/* Адаптивность сайта по ширине экрана */
+
+/* 960px - 1240px */
+@media screen and (max-width: 1240px) {
+    /* Адаптивность меню */
+    .desc-menu {
+        width: 200px;
+    }
+    .active-selection {
+        width: 160px;
+        top: -120px;
+        left: 20px;
+    }
+    .city-selection a {
+        margin-top: 10px;
+    }
+    /* Адаптивность контента главной */
+    main {
+        margin-left: 200px;
+    }
+    .container {
+        width: 680px;   
+    }
+    .premium-holidays h1 {
+        font-size: 56px;
+        line-height: 56px;
+    }
+    .advantages-item {
+        margin-right: 20px;
+    }
+    .advantages-item p {
+        font-size: 16px;
+    }
+    .contact-us-btn {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+    .news-events-item {
+        width: 220px;
+    }
+    .news-events-img {
+        height: auto;
+    }
+    .news-events-img img {
+        width: 220px;
+        height: auto;
+    }
+    .premium-holidays-desc {
+        padding-bottom: 540px;
+    }
+    .premium-holidays-desc-text {
+        left: 120px;
+    }
+    .subscribe-newsletter {
+        flex-wrap: wrap;
+    }
+    .subscribe-newsletter-desc {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .form-privacy-policy {
+        width: 100%;
+    }
+    .form-privacy-policy input {
+        width: 510px;
+    }
+    /* Адаптивность страницы контакты */
+    .ltc-name, .city-name, .employee-name {
+        padding-bottom: 10px;
+    }
+}
+
+/* 720px - 960px */
+@media screen and (max-width: 960px) {
+    /* Адаптивность бокового меню */
+    .desc-menu {
+        width: 150px;
+        padding-top: 20px;
+        z-index: 10;
+    }
+    .logo img {
+        width: 110px;
+        height: auto;
+    }
+    /* Адаптивное меню */
+    .menu-toggle {
+        display: block;
+    }
+    #hamburger_id {
+        display: block;
+    }
+    .main-menu,
+    .second-menu {
+        display: none;
+    }
+    .menu-toggle nav.active {
+        position: absolute;
+        top: 0;
+        left: 149px;
+        display: block;
+        width: 900px;
+        height: calc(100vh + 1px);
+        background: #f0f0f0;
+        border-left: 1px solid #e1e1e1;
+    }
+    nav.active .main-menu,
+    nav.active .second-menu {
+        display: block;
+    }
+    .menu-toggle nav.active li {
+        text-align: left;
+        padding-top: 0;
+        padding-left: 150px;
+    }
+    .menu-toggle nav.active .main-menu {
+        margin: 0;
+        margin-top: 60px;
+    }
+    .menu-toggle nav.active .main-menu li a {
+        font-size: 28px;
+    }
+    .menu-toggle nav.active .second-menu {
+        margin-top: 170px;
+    }
+    .menu-toggle nav.active .second-menu li {
+        font-size: 20px;
+    }
+    .city-phone button {
+        font-size: 13px;
+    }
+    /* Выбор города */
+    .active-selection {
+        width: 120px;
+        padding: 10px 0px;
+        top: -110px;
+        left: 15px;
+        font-size: 14px;
+    }
+    .city-phone p {
+        padding-top: 6px;
+        font-size: 13px;
+    }
+    .tour-operator-number {
+        padding: 14px 20px 0px;
+        font-size: 9px;
+    }
+    .footer-main {
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+    /* Адаптивность контента главной */
+    main {
+        margin-left: 150px;
+    }
+    .container {
+        width: 510px;
+    }
+    .premium-holidays {
+        padding-top: 60px;
+        padding-bottom: 190px;
+    }
+    .advantages-list {
+        flex-wrap: wrap;
+        padding-top: 26px;
+        padding-bottom: 30px;
+    }
+    .advantages-item {
+        width: 100%;
+    }
+    .advantages-item {
+        padding-top: 20px;
+    }
+    .advantages-item:first-child {
+        padding-top: 0;
+    }
+    .all-news-events {
+        font-size: 28px;
+    }
+    .news-events {
+        margin-top: -120px;
+    }
+    .news-events-list {
+        flex-wrap: wrap;
+    }
+    .news-events-item {
+        width: 100%;
+        display: flex;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+    }
+    .news-events-img {
+        height: 160px;
+    }
+    .news-events-img img {
+        width: 210px;
+        height: 160px;
+    }
+    .news-events-date {
+        margin-top: -22px;
+    }
+    .news-events-date .month {
+        font-size: 11px;
+    }
+    .news-events-desc h3 {
+        font-size: 15px;
+    }
+    .premium-holidays-desc {
+        padding-top: 60px;
+        padding-bottom: 400px;
+    }
+    .premium-holidays-desc .container {
+        position: relative;
+        height: 500px;
+    }
+    .premium-holidays-desc-bg {
+        position: absolute;
+        width: 660px;
+        height: 500px;
+        left: -150px;
+    }
+    .premium-holidays-desc-text {
+        top: 80px;
+        padding-bottom: 50px;
+    }
+    .premium-holidays-desc-text h2 br {
+        display: block;
+    }
+    .premium-holidays-desc-text h2 {
+        padding-bottom: 10px;
+        font-size: 28px;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+    .premium-holidays-desc-text p {
+        padding-top: 25px;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+    }
+    footer {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    .subscribe-newsletter-desc p:first-child {
+        font-size: 17px;
+    }
+    .subscribe-newsletter-desc p:last-child {
+        padding-top: 10px;
+        font-size: 13px;
+    }
+    .subscribe-newsletter-desc {
+        padding-bottom: 30px;
+    }
+    .form-privacy-policy input {
+        width: 395px;
+    }
+    .sn-privacy-policy {
+        font-size: 11px;
+    }
+    .copyright-privacy-policy {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: unset;
+        font-size: 9px;
+    }
+    .privacy-policy-social {
+        justify-content: space-between;
+    }
+    .fab {
+        font-size: 18px;
+    }
+    .copyright-privacy-policy p {
+        padding-top: 14px;
+    }
+    /* Адаптивность страницы контакты */
+    .contacts-subscribe {
+        display: none;
+    }
+    .contacts-title-social {
+        padding-top: 110px;
+    }
+    .contacts-table,
+    .employee-contacts-title {
+        padding-top: 50px;
+    }
+    .employee-contacts-title {
+        padding-bottom: 30px;
+    }
+    .employee-contacts-table {
+        margin-bottom: 80px;
+    }
+    .ltc-number p, .contacts-address p, .employee-contacts p {
+        font-size: 15px;
+    }
+    .ltc-name, .city-name, .employee-name {
+        width: 100%;
+    }
+}
+
+/* 620px - 720px */
+@media screen and (max-width: 720px) {
+    /* Адаптивность контента главной */
+    .container {
+        width: 450px;
+    }
+    .news-events-item:nth-child(1) .news-events-img {
+        min-width: 180px;
+        background: url(../img/stock-img1.jpg);
+    }
+    .news-events-item:nth-child(2) .news-events-img {
+        min-width: 180px;
+        background: url(../img/stock-img2.jpg);
+    }
+    .news-events-item:nth-child(3) .news-events-img {
+        min-width: 180px;
+        background: url(../img/stock-img3.jpg);
+    }
+    .news-events-img img {
+        display: none;
+    }
+    .premium-holidays-desc {
+        padding-bottom: 540px;
+    }
+    .premium-holidays-desc-bg {
+        width: 510px;
+        left: -60px;
+    }
+    .premium-holidays-desc-text {
+        left: 60px;
+    }
+    .premium-holidays-desc-text p {
+        letter-spacing: 0.4px;
+    }
+    .form-privacy-policy input {
+        width: 230px;
+    }
+    .sn-privacy-policy {
+        letter-spacing: 0.4px;
+    }
+    /* Адаптивность страницы контакты */
+    .contacts-title-social {
+        padding-top: 50px;
+    }
+    .contacts-table {
+        padding-top: 40px;
+    }
+    .ltc-name h3, .city-name h3, .employee-name h3 {
+        padding-top: 0;
+    }
+}
+
+/* 320px - 620px */
+@media screen and (max-width: 620px) {
+    /* Адаптивность меню */
+    .desc-menu {
+        background-color: #fff;
+        width: 100%;
+        height: 100px;
+        padding-top: 0px;
+        justify-content: space-between;
+    }
+    .logo {
+        padding-left: 20px;
+    }
+    .logo img {
+        width: 75px;
+        margin-top: -20px;
+    }
+    .logo-none-bg {
+        background: #f0f0f0;
+        justify-content: flex-end;
+    }
+    .logo-none-bg .logo {
+        display: none;
+    }
+    .footer-main {
+        display: none;
+    }
+    .mobile-menu {
+        background: #f0f0f0;
+        justify-content: flex-end;
+    }
+    #hamburger_id {
+        margin-top: 20px;
+    }
+    .hamburger::after {
+        display: none;
+    }
+    .menu-toggle nav.active {
+        width: 100%;
+        left: 0;
+        top: 60px;
+    }
+    .menu-toggle nav.active .main-menu {
+        margin-top: 0px;
+    }
+    .adaptive-menu .open-text {
+        display: none;
+    }
+    .menu-toggle nav.active li {
+        padding-left: 0;
+        text-align: center;
+    }
+    .menu-toggle nav.active .main-menu li {
+        padding-top: 6px;
+    }
+    .menu-toggle nav.active .main-menu li,
+    .menu-toggle nav.active .main-menu li a {
+        font-size: 19px;
+    }
+    .menu-toggle nav.active .second-menu {
+        margin-top: 30px;
+    }
+    .menu-toggle nav.active .footer-main {
+        display: block;
+        padding-top: 70px;
+    }
+    .menu-toggle nav.active .footer-main .city-phone {
+        font-size: 15px;
+    }
+    .menu-toggle nav.active .footer-main .city-phone p {
+        font-size: 19px;
+    }
+    .menu-toggle nav.active .footer-main .tour-operator-number {
+        font-size: 13px;
+    }
+    .menu-toggle nav.active .footer-main .active-selection {
+        left: calc(50% - 60px);
+    }
+    /* Адаптивность контента главной */
+    main {
+        margin-left: 0;
+        margin-top: 100px;
+    }
+    .container {
+        width: 90%;
+    }
+    .premium-holidays-desc-bg {
+        width: 100%;
+        left: 0;
+    }
+    .form-privacy-policy input {
+        width: 66%;
+    }
+    .form-privacy-policy button {
+        width: 34%;
+    }
+    /* Адаптивность страницы контакты */
+    .ltc-number, .contacts-address, .employee-contacts {
+        width: 100%;
+    }
+    .contacts-title-social h1 {
+        font-size: 30px;
+    }
+    .contacts-title-social .social .fab {
+        font-size: 24px;
+    }
+    .contacts-title-social {
+        padding-top: 40px;
+    }
+    .contacts-table {
+        padding-top: 20px;
+    }
+    .ltc-number p, .contacts-address p, .employee-contacts p {
+        font-size: 14px;
+    }
+    .ltc-name, .city-name, .employee-name {
+        padding-bottom: 6px;
+    }
+    .chelyabinsk, .dubai, .aviatransportations, .finance {
+        width: 100%;
+    }
+    .employee-contacts-title {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .employee-contacts-title h2 {
+        font-size: 22px;
+    }
+    .booking .employee-contacts p:last-child {
+        padding-top: 20px;
+    }
+    .employee-contacts-table {
+        padding-bottom: 60px;
+    }
+}
+
+/* 320px - 540px */
+@media screen and (max-width: 540px) {
+    /* Адаптивность контента главной */
+    .container {
+        width: 90%;
+    }
+    .premium-holidays {
+        padding-top: 30px;
+        padding-bottom: 150px;
+    }
+    .premium-holidays h1 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .all-news-events {
+        width: 100%;
+        font-size: 22px;
+    }
+    .news-events {
+        margin-top: -80px;
+    }
+    .premium-holidays-desc {
+        padding-bottom: 400px;
+    }
+    .premium-holidays-desc .container {
+        width: 100%;
+    }
+    .premium-holidays-desc-bg {
+        position: relative;
+        height: 100%;
+        background-position: top;
+        background-size: contain;
+    }
+    .premium-holidays-desc-text {
+        top: 300px;
+        left: 0;
+        padding: 30px 20px;
+    }
+    .premium-holidays-desc-text h2 {
+        font-size: 22px;
+    }
+    .premium-holidays-desc-text h2 br {
+        display: none;
+    }
+    .premium-holidays-desc-text p {
+        padding-top: 20px;
+        font-size: 14px;
+    }
+}
+
+/* 320px - 512px */
+@media screen and (max-width: 512px) {
+    /* Адаптивность контента главной */
+    .premium-holidays-desc {
+        padding-bottom: 460px;
+    }
+}
+
+/* 320px - 460px */
+@media screen and (max-width: 460px) {
+    /* Адаптивность контента главной */
+    .news-events-item {
+        flex-wrap: wrap;
+        padding-bottom: 25px;
+    }
+    .news-events-item:nth-child(1) .news-events-img,
+    .news-events-item:nth-child(2) .news-events-img,
+    .news-events-item:nth-child(3) .news-events-img {
+        background: none;
+    }
+    .news-events-img,
+    .news-events-img img {
+        width: 100%;
+        height: auto;
+    }
+    .news-events-img img {
+        display: block;
+    }
+}
+
+/* 320px - 440px */
+@media screen and (max-width: 440px) {
+    /* Адаптивность контента главной */
+    .premium-holidays-desc-text {
+        top: 250px;
+    }
+    .premium-holidays-desc {
+        padding-bottom: 460px;
+    }
+}
+
+/* 320px - 521px */
+@media screen and (max-width: 421px) {
+    /* Адаптивность контента главной */
+    .premium-holidays-desc {
+        padding-bottom: 500px;
+    }
+}
+
+/* 320px - 360px */
+@media screen and (max-width: 360px) {
+    /* Адаптивность контента главной */
+    .premium-holidays-desc {
+        padding-bottom: 580px;
+    }
+    .premium-holidays-desc-text {
+        top: 220px;
+    }
+    .form-privacy-policy button {
+        width: 24%;
+        font-size: 0;
+    }
+    .form-privacy-policy button::before {
+        content: "\f105";
+        font-size: 40px;
+        font-family: "fontAwesome";
+    }
+    .privacy-policy-social {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .privacy-policy-social a:first-child {
+        align-self: flex-start;
+    }
+    .social {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    /* Адаптивность страницы контакты */
+    .contacts-title-social .social {
+        width: auto;
+        margin-bottom: 0;
+    }
+}
+
+/* 320px - 348px */
+@media screen and (max-width: 348px) {
+    /* Адаптивность контента главной */
+    .premium-holidays-desc {
+        padding-bottom: 620px;
+    }
+}

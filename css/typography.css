@@ -1,0 +1,402 @@
+.typography-text {
+    padding-bottom: 180px;
+}
+
+.typography-img img {
+    width: 100%;
+}
+
+/* Статьи с заголовками */
+h1 {
+    padding-top: 100px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 300;
+}
+
+p {
+    width: 540px;
+    padding-top: 30px;
+}
+
+/* Ссылки в текстах */
+p a {
+    text-decoration: none;
+    color: #7ab7a8;
+}
+
+p a:hover {
+    color: #e36f4d;
+}
+
+h2 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 300;
+}
+
+h3,
+.unourdered-list h3,
+.ordered-list h3,
+h3 {
+    color: #7ab7a8;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 21px;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+/* Цитата */
+blockquote {
+    width: 540px;
+    position: relative;
+    margin: 50px 0px 10px 0px;
+    font-size: 21px;
+}
+
+blockquote .author {
+    padding-top: 20px;
+    font-size: 13px;
+    color: #948f96;
+}
+
+blockquote::before{
+    content: "\201C";
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #8dbfb3;
+    position: absolute;
+    left: -50px;
+    top: -15px;
+}
+
+.slider {
+    margin-top: 60px;
+}
+
+/* Кнопки слайдера */
+.slider .slick-prev,
+.slider .slick-next {
+    width: 48px;
+    height: 48px;
+    top: calc(50% - 24px);
+    background: #8dbfb3;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.slider .slick-prev {
+    left: -24px;
+    z-index: 1;
+}
+
+.slider .slick-next {
+    right: -24px;
+    z-index: 1;
+}
+
+.slider .slick-prev::before {
+    content: '\f104';
+}
+
+.slider .slick-next:before {
+    content: '\f105';
+}
+
+.slider .slick-prev::before,
+.slider .slick-next:before {
+    font-family: 'fontAwesome';
+}
+
+.slider .slick-prev:hover,
+.slider .slick-prev:focus,
+.slider .slick-next:hover,
+.slider .slick-next:focus {
+    color: #fff;
+    background: #8dbfb3;
+}
+
+/* Описание слайдера */
+.slider-desc-number {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-desc-number .desc {
+    width: 540px;
+    color: #948f96;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+}
+
+.slider-desc-number .number {
+    width: auto;
+    font-size: 21px;
+    font-weight: 300;
+    color: #7ab7a8;
+}
+
+.slider-desc-number .number::after {
+    content: '/ 5';
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+/* Маркированный список */
+.unourdered-list,
+.ordered-list {
+    width: 600px;
+}
+
+.unourdered-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.unourdered-list ul li,
+.ordered-list ol li {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    color: #575756;
+    letter-spacing: 0.4px;
+}
+
+.unourdered-list ul li::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 6px;
+    height: 6px;
+    margin-top: 5px;
+    border: 2px solid #8dbfb3;
+    border-radius: 50%;
+}
+
+.unourdered-list ul li:last-child {
+    padding-bottom: 0;
+}
+
+/* Нумерованный список */
+.ordered-list ol {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    counter-reset: li;
+}
+
+.ordered-list ol li {
+    position: relative;
+    padding-left: 40px;
+    counter-increment: li;
+}
+
+.ordered-list ol li::before {
+    position: absolute;
+    left: 0;
+    content: counter(li)'.';
+    color: #8dbfb3;
+    display: inline-block;
+}
+
+.ordered-list ol li:last-child {
+    padding-bottom: 0;
+}
+
+/* Таблица */
+.table {
+    display: flex;
+}
+
+table {
+    width: calc(100% - 80px);
+    padding: 10px 40px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+}
+
+table tr th {
+    padding: 24px 0px;
+    padding-right: 30px;
+    text-align: left;
+    font-weight: 400;
+}
+
+table tr th {
+    border-bottom: 1px solid #ebebeb;
+}
+
+table tr:first-child th {
+    border-bottom: 1px solid #7ab7a8;
+}
+
+table tr:last-child th {
+    border-bottom: none;
+}
+
+table tr:first-child th {
+    color: #8dbfb3;
+}
+
+.table table:nth-child(1) {
+    padding-right: 0;
+}
+
+.table table:nth-child(2) {
+    padding: 10px 0px;
+}
+
+.table table:nth-child(3) {
+    padding-left: 0;
+}
+
+/* Адаптивность */
+
+/* 720px - 960px */
+@media screen and (max-width: 960px) {
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    h1 br {
+        display: none;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    h3, .unourdered-list h3, .ordered-list h3, h3 {
+        font-size: 19px;
+        line-height: 28px;
+    }
+    .slider-desc-number .desc {
+        width: 360px;
+    }
+    .unourdered-list, .ordered-list {
+        width: 100%;
+    }
+    .table {
+        flex-wrap: wrap;
+    }
+    .table table:nth-child(1),
+    .table table:nth-child(2),
+    .table table:nth-child(3) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .table table:nth-child(1),
+    .table table:nth-child(2) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .table table:nth-child(2),
+    .table table:nth-child(3) {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+/* 720px - 800px */
+@media screen and (max-width: 800px) {
+    .typography-text .container {
+        width: 450px;
+    }
+    p {
+        width: 100%;
+    }
+    blockquote {
+        width: 100%;
+    }
+}
+
+/* 620px - 720px */
+@media screen and (max-width: 720px) {
+    .slick-slider .container {
+        width: 90%;
+    }
+    blockquote {
+        padding-top: 20px;
+    }
+    blockquote::before {
+        left: 0;
+        top: -20px;
+    }
+}
+
+/* 320px - 620px */
+@media screen and (max-width: 620px) {
+    
+    /* Адаптивность страници типографии */
+    .typography-text .container {
+        width: 90%;
+    }
+    h1 {
+        padding-top: 40px;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    p {
+        font-size: 14px;
+        padding-top: 20px;
+    }
+    h2 {
+        padding-top: 30px;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    h3, 
+    .unourdered-list h3, 
+    .ordered-list h3 {
+        padding-top: 30px;
+        padding-bottom: 0;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    blockquote {
+        margin-top: 30px;
+        font-size: 17px;
+        line-height: 25px;
+    }
+    blockquote::before {
+        top: 0;
+    }
+}
+
+
+/* 320px - 512px */
+@media screen and (max-width: 512px) {
+    .slick-slider .container {
+        width: 100%;
+    }
+    .slider-desc-number {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .slider-desc-number .desc {
+        padding-top: 14px;
+        width: 100%;
+    }
+    .slider .slick-prev, .slider .slick-next {
+        top: 400px;
+    }
+    .slider .slick-prev {
+        left: calc(70% - 20px);
+    }
+    .slider .slick-next {
+        right: 15px;
+    }
+}
